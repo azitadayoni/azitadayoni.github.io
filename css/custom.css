@@ -1,61 +1,68 @@
 /* =========================================================
-   AZI TADAYONI — ELEGANT / DREAMY ARTIST THEME
+   AZI TADAYONI — ARTIST PORTFOLIO
+   Dark / Elegant / Dreamy
    ========================================================= */
 
-/* ---------- Fonts ---------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
-
-
-/* ---------- Colour palette ---------- */
+/* ---------------------------------------------------------
+   COLOUR PALETTE
+   --------------------------------------------------------- */
 
 :root {
-    --black: #11100f;
-    --charcoal: #191817;
-    --dark-brown: #211c1b;
-    --burgundy: #542f35;
-    --burgundy-light: #70434a;
-    --ivory: #eee8df;
-    --cream: #d9d0c5;
-    --muted: #aaa19a;
-    --gold: #b69a72;
-    --white: #f7f4ef;
+    --background: #171514;
+    --background-light: #1d1a19;
+    --background-warm: #211b1b;
+    --background-burgundy: #251b1d;
+
+    --text: #eee8df;
+    --text-soft: #c7beb5;
+    --text-muted: #938b84;
+
+    --accent: #aa8b69;
+    --accent-soft: #806b58;
 }
 
 
-/* ---------- General ---------- */
+/* ---------------------------------------------------------
+   GENERAL
+   --------------------------------------------------------- */
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--black);
-    color: var(--ivory);
+    background-color: var(--background);
+    color: var(--text);
+
     font-family: 'Inter', sans-serif;
     font-weight: 300;
+
     letter-spacing: 0.02em;
     line-height: 1.8;
 }
 
 p {
+    color: var(--text-soft);
     font-size: 16px;
-    color: var(--cream);
+    line-height: 1.9;
 }
 
 a {
-    color: var(--ivory);
-    transition: all 0.3s ease;
+    color: var(--text);
+    transition: color 0.3s ease;
 }
 
 a:hover,
 a:focus {
-    color: var(--gold);
+    color: var(--accent);
     text-decoration: none;
 }
 
 
-/* ---------- Headings ---------- */
+/* ---------------------------------------------------------
+   HEADINGS
+   --------------------------------------------------------- */
 
 h1,
 h2,
@@ -63,15 +70,16 @@ h3,
 h4,
 h5,
 h6 {
+    color: var(--text);
+
     font-family: 'Cormorant Garamond', serif;
     font-weight: 500;
+
     letter-spacing: 0.04em;
-    color: var(--ivory);
 }
 
 h2 {
-    font-size: 46px;
-    margin-bottom: 25px;
+    font-size: 48px;
 }
 
 h3 {
@@ -79,90 +87,136 @@ h3 {
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    NAVIGATION
-   ========================================================= */
+   --------------------------------------------------------- */
 
 .navbar-custom {
-    background-color: rgba(17, 16, 15, 0.96);
+    background-color: rgba(23, 21, 20, 0.97);
     border: none;
-    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+
     font-family: 'Inter', sans-serif;
     font-weight: 400;
+
     letter-spacing: 0.12em;
-    text-transform: uppercase;
 }
 
 .navbar-custom .navbar-brand {
-    color: var(--ivory);
+    color: var(--text);
+
     font-family: 'Cormorant Garamond', serif;
-    font-size: 27px;
+    font-size: 28px;
     font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: none;
+
+    letter-spacing: 0.06em;
 }
 
 .navbar-custom .navbar-brand:hover {
-    color: var(--gold);
+    color: var(--accent);
 }
 
 .navbar-custom .navbar-nav > li > a {
-    color: var(--cream);
+    color: var(--text-soft);
+
     font-size: 12px;
-    letter-spacing: 0.16em;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    letter-spacing: 0.15em;
+
+    transition: color 0.3s ease;
 }
 
 .navbar-custom .navbar-nav > li > a:hover,
 .navbar-custom .navbar-nav > li > a:focus {
-    color: var(--gold);
-    background-color: transparent;
+    background: transparent;
+    color: var(--accent);
 }
 
+
+/* ---------------------------------------------------------
+   MOBILE NAVIGATION
+   --------------------------------------------------------- */
+
 .navbar-custom .navbar-toggle {
-    border: 1px solid rgba(238, 232, 223, 0.4);
-    background-color: transparent;
+    background: transparent;
+    border: 1px solid var(--accent-soft);
 }
 
 .navbar-custom .navbar-toggle:hover {
-    background-color: var(--burgundy);
+    background-color: var(--background-burgundy);
 }
 
 .navbar-custom .navbar-toggle .icon-bar {
-    background-color: var(--ivory);
+    background-color: var(--text);
 }
 
 
-/* =========================================================
-   HEADER / HERO
-   ========================================================= */
+/* ---------------------------------------------------------
+   HERO / HOME
+   --------------------------------------------------------- */
 
 header {
-    background:
-        radial-gradient(
-            circle at 50% 20%,
-            rgba(84, 47, 53, 0.25),
-            transparent 40%
-        ),
-        linear-gradient(
-            145deg,
-            #11100f 0%,
-            #1d1918 55%,
-            #211c1b 100%
-        );
+    background-color: var(--background);
 
-    color: var(--ivory);
+    color: var(--text);
+
     padding: 150px 0 110px;
 }
 
-header img {
-    border-radius: 2px;
-    border: 1px solid rgba(182, 154, 114, 0.35);
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.45),
-        0 0 0 10px rgba(255, 255, 255, 0.015);
+
+/* Center everything in hero */
+
+header .col-lg-12 {
+    text-align: center;
 }
+
+
+/* ---------------------------------------------------------
+   ARTIST PHOTO
+   --------------------------------------------------------- */
+
+header img {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 200px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 2px;
+
+    border: 1px solid rgba(170, 139, 105, 0.35);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4);
+
+    opacity: 0.95;
+}
+
+
+/* ---------------------------------------------------------
+   PHOTO CAPTION
+   --------------------------------------------------------- */
+
+.photo-caption {
+    margin-top: 12px;
+
+    color: var(--text-muted);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+
+    letter-spacing: 0.08em;
+
+    text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   INTRO TEXT
+   --------------------------------------------------------- */
 
 .intro-text {
     margin-top: 35px;
@@ -170,268 +224,243 @@ header img {
 
 .intro-text .name {
     display: block;
-    color: var(--ivory);
+
+    color: var(--text);
+
     font-family: 'Cormorant Garamond', serif;
     font-size: 68px;
     font-weight: 500;
+
     letter-spacing: 0.05em;
     line-height: 1.1;
 }
 
 .intro-text .skills {
-    color: var(--muted);
+    color: var(--text-muted);
+
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 300;
+
     letter-spacing: 0.18em;
     line-height: 2;
+
     text-transform: uppercase;
 }
 
 
-/* ---------- Decorative lines ---------- */
+/* ---------------------------------------------------------
+   DECORATIVE LINES
+   --------------------------------------------------------- */
 
 hr.star-light,
 hr.star-primary {
     border: 0;
-    border-top: 1px solid rgba(182, 154, 114, 0.55);
-    max-width: 180px;
+    border-top: 1px solid rgba(170, 139, 105, 0.5);
+
+    max-width: 160px;
+
     margin: 30px auto;
 }
 
-hr.star-light:after,
-hr.star-primary:after {
-    background: transparent;
-    color: var(--gold);
-}
 
-
-/* =========================================================
-   SECTIONS
-   ========================================================= */
-
-section {
-    padding: 100px 0;
-}
+/* ---------------------------------------------------------
+   PORTFOLIO
+   --------------------------------------------------------- */
 
 #portfolio {
-    background-color: var(--charcoal);
-}
-
-#about {
-    background:
-        linear-gradient(
-            135deg,
-            #211c1b 0%,
-            #191817 100%
-        );
-}
-
-section h2 {
-    color: var(--ivory);
+    background-color: var(--background-light);
 }
 
 
-/* =========================================================
-   PORTFOLIO
-   ========================================================= */
+/* Portfolio images */
 
 .portfolio-item {
     margin-bottom: 30px;
 }
 
 .portfolio-item img {
-    filter: saturate(0.75);
-    transition:
-        transform 0.5s ease,
-        filter 0.5s ease,
-        opacity 0.5s ease;
-
     opacity: 0.9;
+
+    filter: saturate(0.75);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        filter 0.4s ease;
 }
 
 .portfolio-item:hover img {
-    filter: saturate(1);
     opacity: 1;
+
+    filter: saturate(1);
+
     transform: scale(1.015);
 }
 
-.portfolio-link {
-    background-color: var(--dark-brown);
-    border: 1px solid rgba(182, 154, 114, 0.15);
-}
+
+/* Portfolio hover */
 
 .portfolio-link .caption {
-    background: rgba(84, 47, 53, 0.82);
+    background-color: rgba(37, 27, 29, 0.85);
 }
 
 .portfolio-link .caption .caption-content {
-    color: var(--ivory);
+    color: var(--text);
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    ABOUT
-   ========================================================= */
+   --------------------------------------------------------- */
+
+#about {
+    background-color: var(--background-warm);
+}
 
 #about p {
-    color: var(--cream);
+    color: var(--text-soft);
+
     font-size: 17px;
     line-height: 2;
 }
 
-#about strong {
-    color: var(--ivory);
-}
 
-
-/* =========================================================
+/* ---------------------------------------------------------
    FOOTER
-   ========================================================= */
+   --------------------------------------------------------- */
 
 footer {
-    color: var(--cream);
+    background-color: var(--background-burgundy);
+
+    color: var(--text-soft);
 }
 
 .footer-above {
-    background-color: #0d0c0c;
+    background-color: var(--background-burgundy);
+
     padding: 70px 0 50px;
 }
 
 .footer-below {
-    background-color: #080808;
-    color: #77716c;
+    background-color: #121110;
+
+    color: var(--text-muted);
+
     padding: 25px 0;
-    font-size: 12px;
+
+    font-size: 11px;
     letter-spacing: 0.08em;
 }
 
 footer h3 {
-    color: var(--ivory);
-    font-size: 25px;
-    letter-spacing: 0.06em;
+    color: var(--text);
+
+    font-size: 27px;
 }
 
 footer p {
-    color: var(--muted);
+    color: var(--text-muted);
+
     font-size: 14px;
 }
 
-footer .list-inline {
-    margin-top: 20px;
-}
 
-
-/* ---------- Social icons ---------- */
+/* ---------------------------------------------------------
+   SOCIAL ICONS
+   --------------------------------------------------------- */
 
 .btn-social {
-    border: 1px solid rgba(182, 154, 114, 0.4);
-    color: var(--cream);
+    background-color: transparent;
+
+    border: 1px solid rgba(170, 139, 105, 0.4);
+
+    color: var(--text-soft);
+
     transition: all 0.3s ease;
 }
 
 .btn-social:hover {
-    background-color: var(--burgundy);
-    border-color: var(--burgundy-light);
-    color: var(--ivory);
+    background-color: var(--accent);
+
+    border-color: var(--accent);
+
+    color: var(--background);
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    PORTFOLIO MODALS
-   ========================================================= */
+   --------------------------------------------------------- */
 
 .portfolio-modal .modal-content {
-    background-color: #151312;
-    color: var(--cream);
+    background-color: var(--background);
+
+    color: var(--text);
 }
 
 .portfolio-modal .modal-content h2 {
-    color: var(--ivory);
+    color: var(--text);
 }
 
 .portfolio-modal .modal-content p {
-    color: var(--cream);
+    color: var(--text-soft);
 }
 
-.portfolio-modal .modal-content .item-details {
-    color: var(--muted);
+.portfolio-modal .item-details {
+    color: var(--text-muted);
 }
 
-.portfolio-modal .modal-content .item-details strong {
-    color: var(--ivory);
+.portfolio-modal .item-details strong {
+    color: var(--text);
 }
 
-.portfolio-modal .close-modal {
-    background-color: transparent;
-}
+
+/* ---------------------------------------------------------
+   CLOSE BUTTON
+   --------------------------------------------------------- */
 
 .portfolio-modal .close-modal:hover {
-    background-color: rgba(84, 47, 53, 0.4);
+    background-color: var(--background-burgundy);
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    BUTTONS
-   ========================================================= */
+   --------------------------------------------------------- */
 
 .btn {
     border-radius: 0;
+
     font-family: 'Inter', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
+
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
 .btn-default {
     background-color: transparent;
-    border: 1px solid rgba(182, 154, 114, 0.5);
-    color: var(--ivory);
+
+    border: 1px solid rgba(170, 139, 105, 0.5);
+
+    color: var(--text);
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    background-color: var(--burgundy);
-    border-color: var(--burgundy);
-    color: var(--ivory);
+    background-color: var(--accent);
+
+    border-color: var(--accent);
+
+    color: var(--background);
 }
 
 
-/* =========================================================
-   SCROLL BUTTON
-   ========================================================= */
-
-.scroll-top .btn {
-    background-color: var(--burgundy);
-    border: none;
-    color: var(--ivory);
-}
-
-.scroll-top .btn:hover {
-    background-color: var(--burgundy-light);
-}
-
-
-/* =========================================================
-   PHOTO CAPTION
-   ========================================================= */
-
-.photo-caption {
-    margin-top: 12px;
-    color: #8f8882;
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    font-weight: 300;
-    letter-spacing: 0.08em;
-    line-height: 1.5;
-    text-align: center;
-}
-
-
-/* =========================================================
+/* ---------------------------------------------------------
    MOBILE
-   ========================================================= */
+   --------------------------------------------------------- */
 
 @media (max-width: 767px) {
 
@@ -439,26 +468,26 @@ footer .list-inline {
         padding: 120px 0 80px;
     }
 
+    header img {
+        width: 180px;
+        height: 270px;
+    }
+
     .intro-text .name {
         font-size: 48px;
     }
 
     .intro-text .skills {
-        font-size: 11px;
+        font-size: 10px;
         letter-spacing: 0.12em;
     }
 
     h2 {
-        font-size: 38px;
+        font-size: 40px;
     }
 
     section {
         padding: 75px 0;
-    }
-
-    .navbar-custom .navbar-nav > li > a {
-        padding-top: 15px;
-        padding-bottom: 15px;
     }
 
 }
