@@ -1,1 +1,36 @@
+/* Main font */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navigation */
+.navbar-custom {
+    background-color: #1f2937;
+}
+
+/* Main header */
+header {
+    background-color: #f5f1eb;
+    color: #1f2937;
+}
+
+/* Portfolio section */
+#portfolio {
+    background-color: #ffffff;
+}
+
+/* About section */
+section.success {
+    background-color: #d8c3a5;
+}
+
+/* Footer */
+footer {
+    background-color: #1f2937;
+}
 
