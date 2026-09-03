@@ -128,7 +128,7 @@ header .intro-text .skills {
   color: white;
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: #18BC9C;
+  color: #281D36;
   outline: none;
 }
 .navbar-custom .navbar-nav li a:focus,
@@ -137,13 +137,13 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
-  background: #18BC9C;
+  background: #281D36;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: #18BC9C;
+  background: #281D36;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -153,9 +153,9 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #18BC9C;
+  background-color: #281D36;
   color: white;
-  border-color: #18BC9C;
+  border-color: #281D36;
 }
 @media (min-width: 768px) {
   .navbar-custom {
