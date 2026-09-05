@@ -196,6 +196,11 @@ section.success {
     padding-top: 75px;
   }
 }
+
+#portfolio {
+  background-color: #1B1212;
+}
+
 #portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0;
